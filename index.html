@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="title">Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('animals')">Animals</button>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="gallery">
+    <div class="image nature"><img src="Image/n1.avif" alt="Nature 1" onclick="openLightbox(this)"/></div>
+    <div class="image city"><img src="Image/c1.webp" alt="City 1" onclick="openLightbox(this)"/></div>
+    <div class="image nature"><img src="Image/n2.jpg" alt="Nature 2" onclick="openLightbox(this)"/></div>
+    <div class="image city"><img src="Image/c3.jpg" alt="City 3" onclick="openLightbox(this)"/></div>
+   <div class="image nature"><img src="Image/n3.jpg" alt="Nature 3" onclick="openLightbox(this)"/></div>
+   <div class="image city"><img src="Image/c4.jpg" alt="City 4" onclick="openLightbox(this)"/></div>
+   <div class="image nature"><img src="Image/n4.jpg" alt="Nature 4" onclick="openLightbox(this)"/></div>
+   <div class="image city"><img src="Image/c5.jpg" alt="City 5" onclick="openLightbox(this)"/></div>
+   <div class="image nature"><img src="Image/n5.jpg" alt="Nature 5" onclick="openLightbox(this)"/></div>
+   <div class="image city"><img src="Image/c6.jpg" alt="City 6" onclick="openLightbox(this)"/></div>
+   <div class="image nature"><img src="Image/n6.jpg" alt="Nature 6" onclick="openLightbox(this)"/></div>
+   <div class="image city"><img src="Image/c7.jpg" alt="City 7" onclick="openLightbox(this)"/></div>
+    <div class="image animals"><img src="Image/a5.webp" alt="Animal 5" onclick="openLightbox(this)"/></div>
+
+    <div class="image city"><img src="Image/c2.webp" alt="City 2" onclick="openLightbox(this)"/></div>
+    <div class="image animals"><img src="Image/a1.jpg" alt="Animal 1" onclick="openLightbox(this)"/></div>
+    <div class="image nature"><img src="Image/n7.jpg" alt="Nature 7" onclick="openLightbox(this)"/></div>
+    <div class="image animals"><img src="Image/a2.jpg" alt="Animal 2" onclick="openLightbox(this)"/></div>
+    <div class="image city"><img src="Image/c8.jpg" alt="City 8" onclick="openLightbox(this)"/></div>
+    <div class="image animals"><img src="Image/a3.avif" alt="Animal 3" onclick="openLightbox(this)"/></div>
+    <div class="image nature"><img src="Image/n8.jpg" alt="Nature 8" onclick="openLightbox(this)"/></div>
+    <div class="image animals"><img src="Image/a4.jpeg" alt="Animal 4" onclick="openLightbox(this)"/></div>
+    
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" />
+    <div class="lightbox-nav">
+      <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+      <span class="next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
